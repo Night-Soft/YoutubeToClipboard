@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "YoutubeClipboard",
+    "description": "YoutubeClipboard",
+    "short_name": "YoutubeClipboard",
+    "version": "1.0",
+    "icons": {
+        "128": "img/icon.png"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png"
+    },
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "commands": {
+        "clipboard-key": {
+            "description": "Copy to clipboard",
+            "global": true,
+            "suggested_key": {
+                "default": "Ctrl+Q",
+                "mac": "Command+Y"
+            }
+        }
+    },
+    "permissions": [
+        "tabs",
+        "clipboardRead",
+        "clipboardWrite",
+        "experimental",
+        "https://www.youtube.com/*"
+    ]
+}
